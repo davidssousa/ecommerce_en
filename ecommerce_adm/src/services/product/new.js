@@ -9,6 +9,7 @@ module.exports = (req, res) => {
 		})
 		.then((categories) => {
 			let product = new Product()
+			product.category = new Category()
 			
 			return res.render('product/new', {
 				title: 'Admin Ecommerce',
